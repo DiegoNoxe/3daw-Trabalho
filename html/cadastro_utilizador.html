@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro_utilizador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <form onsubmit="verificarSenha(event)">
+        <div class="sair"><a href="index.html"><i style="color: black; " class="fa-solid fa-xmark"></i></a></div>
+
+        <h2>  Cadastro </h2>
+    
+        <div class="campoEntrada">
+
+        </div>
+        <input id="campoEmail" type="email" placeholder="Email" required>
+        <div class="campoEntrada">
+            
+        </div>
+        <input id="campoNome" type="text" placeholder="Nome" required>
+        <div class="campoEntrada1">
+            
+        </div>
+        <input class="firstPassword" id="campoSenha" type="password" placeholder="Senha" required>
+        <div class="campoEntrada2">
+           
+        </div>
+        <input class="secondPassword" id="campoSenha2" type="password" placeholder="Confirmar senha" required>
+        <div class="buttonContainer">
+            <button onclick="changePage()" class="btn" type="submit">Cadastrar</button>
+        </div>
+        <script src="index.js"></script>
+</body>
+</html>

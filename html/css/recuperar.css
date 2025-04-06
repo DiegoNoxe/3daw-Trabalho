@@ -1,0 +1,176 @@
+body {
+    background: radial-gradient(
+      circle at 30% 30%,
+      #1a1a2e 10%,
+      #16213e 30%,
+      #092241 50%,
+      #2a3a43 70%,
+      #00293f 90%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sair {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.sair i {
+    color: black;
+    font-size: 1.5rem;
+}
+
+
+form{
+    position: relative;
+    height: 90vh;
+    border-radius: 20px;
+    padding: 40px 100px;
+    background-color:#E4E9F2;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+form input{
+    font-size: 1.1rem;
+    height: 3rem;
+    width: 100%;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+    transition: 1s;
+    border: none;
+    box-shadow: blue 0px 0px 0px 2px inset, rgba(173, 240, 153, 0) 10px -10px 0px -3px, rgba(27, 52, 193, 0.356) 1px -3px;
+}
+
+
+form input:focus{
+    box-shadow: rgba(0, 0, 255, 0) 0px 0px 0px 2px inset, rgba(173, 240, 153, 0) 10px -10px 0px -3px, rgba(27, 52, 193, 0) 1px -3px;
+    padding: 20px;
+    transition: 1s;
+}
+
+
+form h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #203959;
+}
+
+
+@media(max-width: 900px){
+    body{
+        height: 130vh;
+    }
+
+    form h2{
+        color: white;
+        text-align: center;
+        font-size: 40px;
+    }
+
+  form{
+    background-color: #ffffff00;
+    height: 90vh;
+  }
+
+  .sair i {
+    color: white;
+    margin-left: 5vw;
+  }
+}
+
+
+@media(max-width: 400px){
+  .sair i {
+    color: white;
+    margin-left: 10vw;
+  }
+}
+
+
+
+.buttonContainer{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+
+    --color: #00ffbf;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: #352570;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 20px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
+
+
+
+   
+
+
+
+
+
+
+
+
+   

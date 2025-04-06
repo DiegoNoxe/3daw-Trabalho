@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <div class="topicos">
+        <a href= "***">Catálogo</a> <!--pagina do catálogo-->
+        <a href= "***">Meus Produtos</a> <!--pagina meus produtos-->
+    </div>
+
+    <div class="filtro">
+        
+            <label>Filtrar por:</label>
+                <input type="radio" id="todos" name="filtro" checked>
+                <label for="todos">Todos</label>
+
+                <input type="radio" id="interesse" name="filtro">
+            <label for="interesse">Só de Interesse</label>
+        
+    </div>
+
+    <div class="lista-produto">
+        <div class="produto">
+            <img src="imagem.jpg" alt="Produto1" class="produto-img">
+            <div class="produto-info">
+              <h3>Título do Produto 1</h3>
+              <p>Descrição do produto 1</p>
+            </div>
+            <button class="botao-interesse" onclick="alternarInteresse(this)">Tenho interesse</button>
+          </div>
+   
+
+ 
+        <div class="produto">
+            <img src="imagem2.jpg" alt="Produto2" class="produto-img">
+            <div class="produto-info">
+              <h3>Título do Produto 2</h3>
+              <p>Descrição do produto 2</p>
+            </div>
+            <button class="botao-interesse" onclick="alternarInteresse(this)">Tenho interesse</button>
+          </div>
+   
+
+   
+        <div class="produto">
+            <img src="imagem3.jpg" alt="Produto2" class="produto-img">
+            <div class="produto-info">
+              <h3>Título do Produto 3</h3>
+              <p>Descrição do produto 3</p>
+            </div>
+            <button class="botao-interesse" onclick="alternarInteresse(this)">Tenho interesse</button>
+          </div>
+   </div>
+
+
+    <div>
+        <!--carregar paginas-->
+    </div>
+
+    <script src="catalogo.js"></script>
+</body>
+</html>

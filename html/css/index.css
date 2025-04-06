@@ -1,0 +1,226 @@
+body {
+    background: radial-gradient(
+      circle at 30% 30%,
+      #1a1a2e 10%,
+      #16213e 30%,
+      #092241 50%,
+      #2a3a43 70%,
+      #00293f 90%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0px 20px 20px 0px;
+    height: 70vh;
+    width: 40vw;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.imagem{
+    height: 70vh;
+    border-radius: 20px 0px 0px 20px;
+    width: 40vw;
+    background-color:  #ac62dd;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+form{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 40px 100px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+form input{
+    font-size: 1.1rem;
+    height: 5rem;
+    width: 25rem;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+    transition: 1s;
+    border: none;
+    box-shadow: blue 0px 0px 0px 2px inset, rgba(173, 240, 153, 0) 10px -10px 0px -3px, rgba(27, 52, 193, 0.356) 1px -3px;
+}
+
+
+form input:focus{
+    box-shadow: rgba(0, 0, 255, 0) 0px 0px 0px 2px inset, rgba(173, 240, 153, 0) 10px -10px 0px -3px, rgba(27, 52, 193, 0) 1px -3px;
+    padding: 20px;
+    transition: 1s;
+}
+
+
+form h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #203959;
+}
+
+.buttonContainer{
+    margin-top:  30px;
+    margin-left: 50px;
+}
+
+.noUser{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.esqueceuSenha a{
+ 
+    font-size: 1.2rem;
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: 2s;
+}
+
+.esqueceuSenha a:hover{
+    transition: 2s;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    color: #ff0000;
+}
+
+
+
+.esqueci {
+    margin-top: 5px;
+}
+
+.btn {
+
+    --color: #00ffbf;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: #352570;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
+
+/* Momento responsividade */
+
+@media(max-width: 1300px){
+    .imagem{
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+
+    form h2{
+        font-size: 50px;
+    }
+
+    .content{
+        background-color:#E4E9F2;
+        border-radius: 10px;
+        height: 80vh;
+        width: 70vw;
+        padding: 30px;
+    }
+
+    form input{
+        width:  50vw;
+        height: 10vh;
+    }
+}
+
+@media (max-width: 1000px){
+    form h2{
+        font-size: 50px;
+    }
+
+    form input{
+        width:  50vw;
+        height: 7vh;
+    }
+
+    .content{
+        background-color:#E4E9F2;
+        border-radius: 10px;
+        height: 80vh;
+        width: 100vw;
+        padding: 30px;
+    }
+}
+  
+   
+
+
+
+
+
+
+
+
+   

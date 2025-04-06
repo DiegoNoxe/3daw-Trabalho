@@ -1,0 +1,80 @@
+body {
+    background: radial-gradient(
+      circle at 30% 30%,
+      #1a1a2e 10%,
+      #16213e 30%,
+      #092241 50%,
+      #2a3a43 70%,
+      #00293f 90%
+    );
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 100vh;
+    padding-top: 40px;
+    gap: 20px;
+}
+
+
+.lista-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #E4E9F2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.produto, .filtro, .topicos{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 15px;
+}
+
+.produto-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produto-info h3 {
+    margin: 0 0 8px 0;
+    color: #0455BF;
+    font-size: 1.2rem;
+}
+
+.produto-info p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.botao-interesse {
+    margin-left: auto;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6495ED;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-interesse:hover {
+    opacity: 0.9;
+}
+
+.botao-interesse.ativo {
+    background-color: #6ff76f;
+}
