@@ -67,6 +67,11 @@ form input:focus{
     transition: 1s;
 }
 
+form input::placeholder{
+    font-size: 1.3rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
 form h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -95,14 +100,13 @@ form h2 {
     font-size: 1.2rem;
     color: #1a1a2e;
     text-decoration: none;
-    transition: 2s;
+    transition: 0.5s;
 }
 
 .esqueceuSenha a:hover{
-    transition: 2s;
+    transition: 0.7s;
     text-decoration: underline;
-    font-size: 1.5rem;
-    color: #ff0000;
+    color: #1b078f;
 }
 
 

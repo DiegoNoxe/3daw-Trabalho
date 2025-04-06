@@ -32,7 +32,7 @@ form{
     height: 90vh;
     border-radius: 20px;
     padding: 40px 100px;
-    background-color:#E4E9F2;
+    background-color: #c2d5e6;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -54,10 +54,15 @@ form input:focus{
     transition: 1s;
 }
 
+form input::placeholder{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+}
+
 
 form h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     margin-bottom: 20px;
     text-align: center;
     color: #203959;

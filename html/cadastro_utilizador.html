@@ -11,29 +11,24 @@
 </head>
 <body>
     <form onsubmit="verificarSenha(event)">
-        <div class="sair"><a href="index.html"><i style="color: black; " class="fa-solid fa-xmark"></i></a></div>
-
+        <div class="sair"><a href="index.html"><i style="color: black; " class="fa-solid fa-xmark"></i></a></div>            
         <h2>  Cadastro </h2>
-    
-        <div class="campoEntrada">
 
-        </div>
         <input  class="animate__animated animate__fadeInRight"  id="campoEmail" type="email" placeholder="Email" required>
-        <div class="campoEntrada ">
+
+        <input class="animate__animated animate__fadeInLeft" id="campoNome" type="text" placeholder="Nome" required>
+
             
-        </div>
-        <input class="animate__animated animate__fadeInRight" id="campoNome" type="text" placeholder="Nome" required>
-        <div class="campoEntrada1">
-            
-        </div>
-        <input  class="animate__animated animate__fadeInRight"  class="firstPassword" id="campoSenha" type="password" placeholder="Senha" required>
-        <div class="campoEntrada2">
+
+        <input  class="animate__animated animate__fadeInBottomRight firstPassword" id="campoSenha" type="password" placeholder="Senha" required>
+   
            
-        </div>
-        <input  class="animate__animated animate__fadeInRight"  class="secondPassword" id="campoSenha2" type="password" placeholder="Confirmar senha" required>
+
+        <input  class="animate__animated animate__fadeInBottomLeft secondPassword"id="campoSenha2" type="password" placeholder="Confirmar senha" required>
         <div class="buttonContainer">
-            <button onclick="changePage()" class="btn" type="submit">Cadastrar</button>
+            <button class="btn" type="submit">Cadastrar</button>
         </div>
+        </form>
         <script src="index.js"></script>
 </body>
 </html>
