@@ -18,7 +18,7 @@ form{
     border-radius: 20px;
     padding: 40px 100px;
     background-color:#E4E9F2;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 form input{
@@ -33,9 +33,9 @@ form input{
 
 
 form input:focus{
-    box-shadow: rgba(0, 0, 255, 0) 0px 0px 0px 2px inset, rgba(173, 240, 153, 0) 10px -10px 0px -3px, rgba(27, 52, 193, 0) 1px -3px;
-    padding: 20px;
-    transition: 1s;
+    background-color: #00b7ff52;
+    height: 4rem;
+    transition: 0.5s;
 }
 
 
