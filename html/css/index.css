@@ -21,7 +21,7 @@ body {
     border-radius: 0px 20px 20px 0px;
     height: 70vh;
     width: 40vw;
-    background-color: #c2d5e6;
+    background-color: #7ccbdf;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -222,6 +222,33 @@ form h2 {
 }
   
    
+@media (min-width: 1300px) and (max-width: 1390px){
+    form h2{
+        font-size: 50px;
+    }
+
+    form input{
+        width:  25vw;
+        height: 7vh;
+    }
+
+    .imagem{
+        height: 80vh;
+    }
+
+    
+    .imagem img{
+        max-width: 48vw;
+    }
+
+    .content{
+        background-color:#E4E9F2;
+        border-radius: 0px 10px 10px 0px;
+        height: 80vh;
+        width: 90vw;
+        padding: 30px;
+    }
+}
 
 
 

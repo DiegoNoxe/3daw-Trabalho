@@ -13,14 +13,114 @@ body {
     height: 100vh;
 }
 
+.sair{
+    display: none; /*Nota: Sempre terá display none em dispositivos maiores.*/
+    left: 0;
+    top: 0;
+    padding: 10px;
+    position: absolute;
+}
+
+
+.sair i{
+    font-size: 1.2rem;
+    color: black;
+    cursor: pointer;
+}
+
+.rightSide{
+    position: relative;
+    border-radius: 0px 10px 10px 0px;
+    background: linear-gradient(to top,  #1cb4da, rgb(27, 99, 194));
+    width:  600px;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.rightSide .rightContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    flex-direction: column;
+}
+
+.rightSide .rightContent h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: azure;
+}
+
+
+
+
+.leftSide{
+    border-radius: 10px 0px 0px 10px;
+    background: linear-gradient(to top,  #4064c7, rgb(68, 84, 175));
+    width: 600px;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-right: 5px solid rgb(1, 1, 5);
+}
+
+.leftContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.leftSide .leftContent h1, p{
+    color: white;
+}
+
+.leftSide .leftContent h1{
+    font-size: 2.2rem;
+}
+
+
+
+
+.leftSide .leftContent p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    max-width: 450px;
+    text-align: justify;
+}
+
+.leftSide .leftContent p{
+    margin-top: 20px;
+    max-width: 450px;
+    text-align: justify;
+}
+
+.leftSide .leftContent .botao-signUp{
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #020c42d3;
+    border: 1px solid #00ffbf;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+.leftSide .leftContent .botao-signUp a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+
 form{
     display: flex;
-    flex-direction: column;
     position: relative;
     border-radius: 20px;
     padding: 40px 100px;
-    background-color:#E4E9F2;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 form input{
@@ -40,32 +140,10 @@ form input:focus{
     transition: 0.5s;
 }
 
-
-form h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3.0rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #203959;
-}
-
 .buttonContainer{
     margin-top:  30px;
-    margin-left: 50px;
-}
 
-.sair {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 5px;
-    border-radius: 50%;
 }
-
-.sair i {
-    font-size: 1.5rem;
-}
-
 
 .btn {
 
@@ -126,15 +204,144 @@ form h2 {
    }
 
 
+   @media (max-width: 800px) {
+    .leftSide{
+        display: none;
+    }
+    .rightSide{
+        border-radius: 10px;
+        height: 70vh;
+        max-width: 95vw;
+    }
+
+    .sair{
+        display: block;
+    }
+
+    .rightSide .rightContent h2{
+        margin-top: 50px;
+        font-size: 2.5rem;
+    }
+    
+    form input{
+        height: 30px;
+    }
+
+  }
 
 
-   
+  @media (min-width: 810px) and (max-width: 1100px) {
+    .leftSide{
+        display: none;
+    }
+    
+    .rightSide{
+        border-radius: 10px;
+        height: 70vh;
+        max-width: 95vw;
+        margin-bottom: 150px;
+    }
 
+    .sair{
+        display: block;
+    }
 
+    .rightSide .rightContent h2{
+        font-size: 4.5rem;
+    }
 
+    body{
+        height: 140vh;
+    }
+    
+    .sair i {
+        font-size: 2.5rem;
+    }
 
+    .btn{
+        font-size: 1.5rem;
+        padding: 25px;
+    }
+    
+    form input{
+        font-size: 1.5rem;
+        height: 50px;
+    }
+  }
+    @media (min-width: 1110px) and (max-width: 1300px) {
+        .leftSide{
+            display: none;
+        }
+        
+        .rightSide{
+            border-radius: 10px;
+            height: 70vh;
+            max-width: 55vw;
+        }
 
+        
+    
+        .sair{
+            display: block;
+        }
+    
+        .rightSide .rightContent h2{
+            margin-top: 40px;
+            font-size
+            : 4.5rem;
+        }
 
+        .sair i {
+            font-size: 2.5rem;
+        }
+    
+        .btn{
+            font-size: 1.5rem;
+            padding: 25px;
+        }
+        
+        form input{
+            font-size: 1.5rem;
+            height: 50px;
+        }
 
+   }
 
-   
+  
+   @media (min-width: 1301px) and (max-width: 1396px) {
+    .leftSide{
+        display: none;
+    }
+    
+    .rightSide{
+        border-radius: 10px;
+        height: 70vh;
+        max-width: 55vw;
+    }
+
+    
+
+    .sair{
+        display: block;
+    }
+
+    .rightSide .rightContent h2{
+        font-size: 4.5rem;
+    }
+
+    .sair i {
+        font-size: 2.5rem;
+    }
+
+    .btn{
+        font-size: 1.5rem;
+        padding: 25px;
+    }
+    
+    form input{
+        font-size: 1.5rem;
+        height: 50px;
+    }
+
+}
+
