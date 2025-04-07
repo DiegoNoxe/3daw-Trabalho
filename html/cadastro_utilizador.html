@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cadastro_utilizador.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <form onsubmit="verificarSenha(event)">
+    <form class="formulario" onsubmit="verificarSenha(event)">
         <div class="leftSide">
             <div class="leftContent">
                 <h1>Encontre o produto ideal para você!</h1>
@@ -28,7 +28,7 @@
                 
                 <h2>  Cadastro </h2>
                 <input  class="animate__animated animate__fadeInRight"  id="campoEmail" type="email" placeholder="Email" required>
-                <input class="animate__animated animate__fadeInLeft" id="campoNome" type="text" placeholder="Nome" required>
+                <input class="animate__animated animate__fadeInLeft" id="campoNome" type="text" placeholder="Nome" >
                 
                 <input  class="animate__animated animate__fadeInBottomRight firstPassword" id="campoSenha" type="password" placeholder="Senha" required>
                 
@@ -39,6 +39,7 @@
                         </div>
             </div>
         </form>
-        <script src="index.js"></script>
+        <script src="index.js">
+        </script>
 </body>
 </html>

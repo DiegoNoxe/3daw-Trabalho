@@ -16,13 +16,15 @@
             </div>
 
             <div class="content">
-                <h2 class="animate__animated animate__headShake">Ecoescambo</h2>
+                <h2>Ecoescambo</h2>
                 <div class="container-Input">
-                <input id="campoEmail" type="email" placeholder="Email" required>
+                <input class="anima-Input" id="campoEmail" type="email" placeholder="Email" required>
                   </div>
                 
                 <div class="container-Input">
-                    <input id="campoSenha" type="password" placeholder="Senha" required>
+                    <input class="anima-Input"  type="password" pattern=".{8,}" required placeholder="Senha"
+                    title="A senha deve ter no mínimo 8 caracteres.">
+
                 </div>
                 <div style="margin-top: 10px;" class="userLogin">
                     <div style="text-align: center;">
@@ -47,6 +49,24 @@
         </form>
     </div>
 </body>
+    <script>
+        let inputs = document.querySelectorAll(".anima-Input");
+ 
+
+        function animar(){  
+            setTimeout(function(){
+            inputs.forEach(function(e) {
+            e.classList.add("animate__animated", "animate__flash");
+             });
+
+            }, 10000);             
+        
+        }
+        animar();
+
+    </script>
 </html>
+
+
 
 

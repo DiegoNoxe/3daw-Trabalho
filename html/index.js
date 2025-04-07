@@ -30,12 +30,18 @@ function verificarSenha(event) {
         return false;
     }
     
-
-    alert("Cadastro realizado com sucesso!");
-
+    animar();
     setTimeout(function() {
         window.location.href = "sucessoCadastro.html";
-    }, 1000);
+    }, 2500);
 
     return true;
+}
+
+let form = document.querySelector(".formulario");
+
+function animar(){
+    setTimeout(function(){
+        form.classList.add("animate__animated", "animate__fadeOut");
+    }, 1000);
 }

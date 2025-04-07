@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/recuperar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <form  onsubmit="verificarSenha(event)">
+    <form class="animate__animated animate__slideInLeft"  onsubmit="verificarSenha(event)">
         <div class="sair"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></div>
         <h2> Autenticação </h2>
         <input id="campoEmail" type="email" placeholder="Digite o seu email" required>
         <div class="buttonContainer">
-            <button class="btn" type="submit">Recuperar Acesso</button>
+            <button onsubmit="enviar()" class="btn"  type="submit">Recuperar Acesso</button>
         </div>
 </body>
 </html>

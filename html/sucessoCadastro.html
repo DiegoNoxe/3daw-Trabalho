@@ -6,6 +6,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cadastro_utilizador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         h1{
@@ -43,10 +44,27 @@
         
 </body>
     <script>
+        let c = document.querySelector(".container");
+
+        function animar(){
+        c.classList.add("animate__animated","animate__fadeInUp")
+        }
+        animar();
+
+        function animarSaida(){
+            setTimeout(function(){
+            c.classList.remove("animate__fadeInUp");
+            c.classList.add("animate__fadeOutDown");
+            }, 2500);
+        
+        }
+
+        animarSaida();
+
         function redirecionar(){
             setTimeout(function(){
                 window.location.href = "catalogo.html";
-            }, 3000);
+            }, 3500);
         }
         redirecionar();
     </script>
