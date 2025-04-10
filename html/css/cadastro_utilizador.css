@@ -64,13 +64,13 @@ body {
 
 .leftSide {
   border-radius: 10px 0px 0px 10px;
-  background: linear-gradient(to top, #4064c7, rgb(68, 84, 175));
+  background: linear-gradient(to top, #0e0d41, rgb(1, 11, 66));
   width: 600px;
   height: 600px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-  border-right: 5px solid rgb(1, 1, 5);
+  border-right: 5px solid rgb(0, 255, 64);
 }
 
 .leftContent {
@@ -317,6 +317,10 @@ form input:focus {
     display: none;
   }
 
+  .buttonContainer {
+    margin-top: 15px;
+  }
+
   .rightSide {
     border-radius: 10px;
     height: 70vh;
@@ -328,20 +332,36 @@ form input:focus {
   }
 
   .rightSide .rightContent h2 {
-    font-size: 4.5rem;
+    margin-top: 20px;
+    font-size: 3.5rem;
   }
 
   .sair i {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .btn {
-    font-size: 1.5rem;
-    padding: 25px;
+    font-size: 1rem;
+    padding: 10px;
   }
 
   form input {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     height: 50px;
   }
+
+
+  form input:focus {
+    background-color:  white;
+    height: 65px;
+    transition: 0.7s;
+  }
+
+  
+  ::placeholder {
+    color: rgb(0, 0, 0);
+  }
+
+
+
 }

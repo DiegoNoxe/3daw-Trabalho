@@ -1,5 +1,9 @@
 /* Configuração geral do site */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Bungee+Tint&family=Honk&family=Jersey+10&family=Lexend+Giga:wght@100..900&family=News+Cycle:wght@400;700&family=Sigmar&family=Sixtyfour+Convergence:BLED@88&family=Spicy+Rice&display=swap');
+
+
 body {
   background: radial-gradient(
     circle at 30% 30%,
@@ -22,27 +26,68 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 4cqb 40px 40px 40px;
   height: 70vh;
-  width: 40vw;
+  width: 35vw;
+  
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.178), rgba(174, 252, 187, 0.041));
+  box-shadow: rgba(0, 0, 0, 0.315) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+  /*
+  
   background-color: #258d73;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
+   original*/
+    }
 
 
 /*Ao contrario do content ele altera a parte esquerda do site!*/
 
-.imagem {
-  height: 70vh;
-  border-radius: 20px 0px 0px 20px;
-  width: 40vw;
-  background-color: #262626;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-}
 
 .imagem img {
   margin-top: 50px;
+}
+
+.slogan{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 650px;
+  max-width: 300px;
+  margin-left: 90px;
+}
+
+
+.slogan h1{
+    color: rgb(255, 238, 0); 
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    letter-spacing: 20px;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.container{
+  background: url("imgBG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.container form .imagem h2{
+  font-family: 'Times New Roman', Times, serif;
+  position: absolute;
+  max-width: 30px;
+  font-size: 4rem;
+  margin: 40px 90px;
+  color: rgb(23, 241, 23);
+}
+
+.color{
+  color: rgb(255, 255, 255);
 }
 
 /*Configurando formulario*/
@@ -52,8 +97,7 @@ form {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: right;
   border-radius: 20px;
   padding: 40px 100px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -89,9 +133,9 @@ form h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 5rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
-  color: #f8ca91;
+  color: #000000;
 }
 
 /*Configurando a div do bubtton*/
@@ -105,7 +149,7 @@ form h2 {
   font-size: 1.5rem;
   display: flex;
   gap: 20px;
-  color: #f8ca91;
+  color: #000000;
   flex-direction: column;
   margin-top: 20px;
 }
@@ -115,7 +159,8 @@ form h2 {
 
 .esqueceuSenha a {
   font-size: 1.2rem;
-  color: #f8ca91;
+  color: #000000;
+  font-weight: bold;
   text-decoration: none;
   transition: 0.5s;
 }
@@ -192,6 +237,7 @@ form h2 {
 
 /* Deixando o site responsivo em diferente telas */
 
+
 @media (max-width: 1300px) {
   .imagem {
     display: none;
@@ -200,22 +246,65 @@ form h2 {
 
 @media (min-width: 1000px) and (max-width: 1300px) {
   form h2 {
-    font-size: 65px;
+    font-size: 75px;
   }
 
+
   .content {
-    background-color: #e4e9f2;
-    border-radius: 10px;
+    background-color: #50c77e;
     height: 80vh;
-    width: 70vw;
+    width: 50vw;
     padding: 30px;
   }
 
   form input {
-    width: 30vw;
-    height: 10vh;
+    width: 28vw;
+    height: 6vh;
+  }
+
+  
+  .noUser {
+    font-size: 1.4rem;
+    display: flex;
+    gap: 20px;
+    color: #f8ca91;
+    flex-direction: column;
+    margin-top: 8px;
+  }
+  
+
+
+
+.esqueceuSenha a:hover {
+  transition: 0.3s;
+}
+
+
+.esqueci {
+  margin-top: 10px;
+}
+
+}
+
+
+@media(max-width: 1390px){
+  .slogan {
+    display: none;
+  }
+
+  .form {
+    display: flex;
+    align-items: center; 
+    justify-content: center !important;
+  }
+
+  .container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
   }
 }
+
 
 @media (max-width: 1000px) {
   form h2 {
@@ -234,13 +323,14 @@ form h2 {
     width: 100vw;
     padding: 30px;
   }
+  
 }
 
 
 
 @media (min-width: 1300px) and (max-width: 1390px) {
   form h2 {
-    font-size: 50px;
+    font-size: 75px;
   }
 
   form input {
@@ -248,19 +338,10 @@ form h2 {
     height: 7vh;
   }
 
-  .imagem {
-    height: 80vh;
-  }
-
-  .imagem img {
-    max-width: 48vw;
-  }
-
   .content {
     background-color: #e4e9f2;
-    border-radius: 0px 10px 10px 0px;
-    height: 80vh;
-    width: 90vw;
+    height: 70vh;
+    width: 50vw;
     padding: 30px;
   }
 }
@@ -277,5 +358,29 @@ form h2 {
     color: black;
 
   }
+
+  hr{
+    width: 1000px;
+  }
+
+  
+.imagem img {
+  margin-top: 15px;
+}
+
+.container {
+  background: radial-gradient(
+    circle at 30% 30%,
+    #2c2c5a 10%,
+    #16213e 30%,
+    #092241 50%,
+    #2a3a43 70%,
+    #00293f 90% ) !important;
+}
+
+form{
+  justify-content: center !important;
+}
+
 }
 
