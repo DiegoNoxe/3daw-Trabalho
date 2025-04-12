@@ -55,11 +55,11 @@
 }
 
 .botao-interesse:hover {
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 .botao-interesse.ativo {
-  background-color: #6ff76f;
+  background-color: #a7ffa7;
 }
 
 
