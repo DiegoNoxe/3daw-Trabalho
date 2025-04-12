@@ -1,32 +1,51 @@
-.lista-produto {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 80%;
-  max-width: 800px;
-  background-color: #e4e9f2;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+body {
+  font-family: 'Poppins', sans-serif !important;
 }
 
-.produto,
-.filtro,
+.lista-produto, .topicos, .filtro{
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  width: 100%;
+  max-width: 800px; 
+  background-color: #d8e9f8;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(32, 13, 13, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.topicos a {
+  text-decoration: none;
+}
+
+.produto, .filtro,
 .topicos {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
-  padding: 15px;
-  border: 1px solid #ccc;
+  gap: 10px; 
+  padding: 20px; 
+  border: 1px solid #304bc5;
   border-radius: 10px;
   background-color: #fff;
-  margin: 15px;
+  margin: 10px 10px; 
+  width: auto; 
+  max-width: 95%;
 }
+
+.topicos {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 
 .produto-img {
   width: 60px;
-  height: 60px;
+  height: 70px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -58,13 +77,10 @@
   opacity: 0.5;
 }
 
-.botao-interesse.ativo {
-  background-color: #a7ffa7;
+.botao-interesse.interesse-ativo {
+  background-color: #67ff67;
+  color: black
 }
-
-
-
-
 
 
 .footer {
