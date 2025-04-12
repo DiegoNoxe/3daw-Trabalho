@@ -365,3 +365,33 @@ form input:focus {
 
 
 }
+
+/* ALTURA entre 600px e 850px */
+@media (min-height: 600px) and (max-height: 850px) {
+  .rightSide {
+    position: relative;
+    width: 600px;
+    height: 450px;
+  }
+
+  .rightSide .rightContent h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+  }
+
+  form input {
+    font-size: 1.1rem;
+    height: 2.5rem;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+  }
+
+  .buttonContainer {
+    margin-top: 10px;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.8em 1.75em;
+  }
+}

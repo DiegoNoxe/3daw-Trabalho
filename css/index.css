@@ -70,7 +70,7 @@ body {
 }
 
 .container{
-  background: url("imgBG.jpg");
+  background: url("../img/imgBG.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -238,77 +238,79 @@ form h2 {
 /* Deixando o site responsivo em diferente telas */
 
 
-@media (max-width: 1300px) {
-  .imagem {
-    display: none;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1300px) {
+/* FAIXA: 1300px a 1390px */
+@media (min-width: 1220px) and (max-width: 1390px) {
   form h2 {
     font-size: 75px;
   }
 
+  form input {
+    width: 25vw;
+    height: 7vh;
+  }
 
   .content {
-    background-color: #50c77e;
-    height: 80vh;
-    width: 50vw;
-    padding: 30px;
+    background-color: #e4e9f217;
+    height: 75vh;
+    width: 40vw;
   }
-
-  form input {
-    width: 28vw;
-    height: 6vh;
-  }
-
-  
-  .noUser {
-    font-size: 1.4rem;
-    display: flex;
-    gap: 20px;
-    color: #f8ca91;
-    flex-direction: column;
-    margin-top: 8px;
-  }
-  
-
-
-
-.esqueceuSenha a:hover {
-  transition: 0.3s;
 }
 
+/* 1000px até 1300px */
 
-.esqueci {
-  margin-top: 10px;
-}
-
-}
-
-
-@media(max-width: 1390px){
-  .slogan {
+@media (min-width: 1000px) and (max-width: 1219px) {
+  .slogan{
     display: none;
   }
 
-  .form {
-    display: flex;
-    align-items: center; 
-    justify-content: center !important;
+  .content {
+    background-color: #e4e9f217;
+    height: 70vh;
+    width: 50vw;
   }
 
-  .container {
-    display: flex;
-    align-items: center; 
+  form {
     justify-content: center;
   }
+    
 }
 
+/* ALTURA entre 600px e 850px */
+@media (min-height: 600px) and (max-height: 800px) {
+  
 
+  form h2 {
+    font-size: 65px;
+  }
+
+  form input {
+    width: 25vw;
+    height: 7vh;
+  }
+
+  .content {
+    position: relative;
+    background-color: #e4e9f218;
+    height: 90vh;
+    width: 40vw;
+    padding: 35px;
+  }
+
+  body {
+    height: 100vh;
+  }
+
+}
+
+/* ATÉ 1000px */
 @media (max-width: 1000px) {
+  .slogan {
+   display: none;
+  }
+
   form h2 {
     font-size: 50px;
+    color: black;
   }
 
   form input {
@@ -323,64 +325,37 @@ form h2 {
     width: 100vw;
     padding: 30px;
   }
-  
-}
 
-
-
-@media (min-width: 1300px) and (max-width: 1390px) {
-  form h2 {
-    font-size: 75px;
-  }
-
-  form input {
-    width: 25vw;
-    height: 7vh;
-  }
-
-  .content {
-    background-color: #e4e9f2;
-    height: 70vh;
-    width: 50vw;
-    padding: 30px;
-  }
-}
-@media (max-width: 1390px) {
-  form h2 {
-    color: black;
-  }
-  
   .noUser {
     color: black;
   }
-  
+
   .esqueceuSenha a {
     color: black;
-
   }
 
-  hr{
+  hr {
     width: 1000px;
   }
 
-  
-.imagem img {
-  margin-top: 15px;
-}
+  .imagem img {
+    margin-top: 15px;
+  }
 
-.container {
-  background: radial-gradient(
-    circle at 30% 30%,
-    #2c2c5a 10%,
-    #16213e 30%,
-    #092241 50%,
-    #2a3a43 70%,
-    #00293f 90% ) !important;
-}
+  .container {
+    background: radial-gradient(
+      circle at 30% 30%,
+      #2c2c5a 10%,
+      #16213e 30%,
+      #092241 50%,
+      #2a3a43 70%,
+      #00293f 90%
+    ) !important;
+  }
 
-form{
-  justify-content: center !important;
+  form {
+    position: relative;
+    box-shadow: none;
+    justify-content: center !important;
+  }
 }
-
-}
-
