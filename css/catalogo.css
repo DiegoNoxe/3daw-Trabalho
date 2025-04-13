@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   gap: 10px; 
   width: 100%;
-  max-width: 800px; 
+  max-width: 75%; 
   background-color: #d8e9f8;
   padding: 20px;
   border-radius: 20px;
