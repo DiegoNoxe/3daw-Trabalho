@@ -45,6 +45,17 @@
       font-family: Arial, sans-serif;
     }
 
+    .botaoEnviar {
+      display: inline-block;
+      background-color: #285afd;
+      color: white;
+      padding: 10px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
     #file-name {
       margin-left: 15px;
       font-size: 14px;
@@ -135,6 +146,9 @@
         </label>
         <span id="file-name">Nenhum arquivo selecionado</span>
       </div>
+      <div style="padding-top: 20px">
+        <button class="botaoEnviar" onclick()="enviarImagem()">Enviar</button>
+      </div>
     </div>
 
 
@@ -183,6 +197,8 @@
         fileName.textContent = 'Nenhum arquivo selecionado';
       }
     });
+
+    function enviarImagem(){};
   </script>
 </body>
 </html>
