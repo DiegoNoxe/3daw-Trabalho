@@ -61,7 +61,7 @@ body {
   font-size: 0.95rem;
 }
 
-.botao-interesse {
+.botao-interesse, .editar, .excluir {
   margin-left: auto;
   padding: 10px 16px;
   border: none;
@@ -73,7 +73,7 @@ body {
   transition: 0.3s;
 }
 
-.botao-interesse:hover {
+.botao-interesse:hover, .editar:hover, .excluir:hover{
   opacity: 0.5;
 }
 
@@ -144,3 +144,5 @@ body {
   padding-top: 20px;
   border-top: 1px solid #eee;
 }
+
+

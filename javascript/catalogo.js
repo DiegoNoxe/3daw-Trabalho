@@ -28,3 +28,5 @@ function filtrar() {
 document.querySelectorAll('input[name="filtro"]').forEach(radio=>{
   radio.addEventListener('change', filtrar);
 })
+
+/*futuro script para não visualizar os produtos do proprio usuario*/
