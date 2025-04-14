@@ -9,11 +9,21 @@
     margin-bottom: 35px;
 }
 
+.navbar i {
+  cursor: pote;
+}
 
+.opt-header{
+  position: absolute;
+  right: 0;
+  margin-top: 330px;
+  background-color: #f5ab66;
+  height: 40vh;
+}
 
 .meuProduto{
 
-    width: 100vw;
+    width: 100%;
     border-bottom: #180404 solid;
 }
 

@@ -1,0 +1,141 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.superior{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 5px solid rgb(0, 0, 0);
+  
+}
+
+.imagemProduto{
+    display: flex;
+    gap: 50px;
+}
+
+.descProduto{
+    max-width: 400px;
+    text-align: justify;
+}
+
+.interessados{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+select{
+    padding: 5px;
+    width: 200px;
+}
+
+.produtosQueAceito{
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.aceito-direito{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.produtoUm, .produtoDois, .produtoTres{
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.botao button {
+    all: unset;
+    background-color: rgb(32, 179, 3);
+    width: 80px;
+    color: white;
+    height: 60px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.botao button:hover {
+    background-color: rgb(119, 236, 96);
+}
+  
+
+
+
+.footer {
+    margin-top: 35vh;
+    background: #f8f9fa;
+    padding: 40px 0 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .footer-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .footer-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+    max-width: 300px;
+  }
+  
+  .social-links {
+    margin: 20px 0;
+  }
+  
+  .social-link {
+    color: #6c757d;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #0d6efd;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #0d6efd;
+  }
+  
+  .copyright {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  
+
+  

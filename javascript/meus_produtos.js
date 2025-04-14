@@ -38,3 +38,12 @@
         botaoEditar.style.display = 'inline-block';
     }
   })
+
+
+function verInteresse(element) {
+  window.location.href = "ofertas_recebidas.html";
+}
+
+function editar(element){
+  window.location.href = "cadastro_produto.html";
+}
