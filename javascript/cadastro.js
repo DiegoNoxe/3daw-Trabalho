@@ -32,7 +32,7 @@ function verificarSenha(event) {
     
     animar();
     setTimeout(function() {
-        window.location.href = "../html/sucessoCadastro.html";
+        window.location.href = "html/sucessoCadastro.html";
     }, 2500);
 
     return true;
