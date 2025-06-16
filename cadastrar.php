@@ -6,15 +6,16 @@ $nome = $_POST['nome'] ?? '';
 $senha = $_POST['senha'] ?? '';
 $senha2 = $_POST['senha2'] ?? '';
 
+// validações da senha
 
 if (!$email || !$nome || !$senha || !$senha2) {
     die("Preencha todos os campos.");
 }
 
 if ($senha !== $senha2) {
-    die("As senhas não coincidem.");
+    header("Location: senha_nao_coincidem.php");
+    exit;
 }
-
 
 if (
     strlen($senha) < 8 ||
@@ -22,7 +23,16 @@ if (
     !preg_match('/[a-z]/', $senha) ||    
     !preg_match('/[0-9]/', $senha)       
 ) {
-    die("A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma minúscula e um número.");
+    header("Location: senha_insuf.php");
+    exit;
+}
+
+// Verificar se o email já existe
+$stmt = $pdo->prepare("SELECT COUNT(*) FROM usuarios WHERE email = ?");
+$stmt->execute([$email]);
+if ($stmt->fetchColumn() > 0) {
+    header("Location: erro_email.php");
+    exit;
 }
 
 
@@ -31,13 +41,15 @@ $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 try {
     $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
     $stmt->execute([$nome, $email, $senhaHash]);
-
-    echo "Cadastro realizado com sucesso! <a href='index.php'>Fazer login</a>";
-} catch (PDOException $e) {
-    if ($e->getCode() == 23000) {
-        die("E-mail já cadastrado.");
-    } else {
-        die("Erro ao cadastrar: " . $e->getMessage());
+    header("Location: sucessocadastro.php" );
+    exit;
+    } catch (PDOException $e) {
+        if ($e->getCode() == 23000) {
+            header("Location: erro_email.php" );
+            exit;
+        } else {
+            header("Location: erro_cadastro.php" );
+            exit;
+        }
     }
-}
 ?>
