@@ -3,7 +3,7 @@ USE ecoescambo;
 --Inserir usuários
 INSERT INTO usuarios (nome, email, senha) VALUES
 ('Marcio Belo', 'mbelo@teste.com.br', '$2y$10$0c736RA9Xxs0Tob/Zjxua.2v.Qw/gE713i.0bTNfG.8aVipQNIyMa'),
-('Jamile Silva', 'jamile@teste.com.br', '$2y$10$aWbYpAzk8SgrFfz1VIMMIeIw4.6So8vGRqgzx1KbmCQy2TaqW6F9C');
+('Jamile Silva', 'jamile@teste.com.br', '$2y$10$0c736RA9Xxs0Tob/Zjxua.2v.Qw/gE713i.0bTNfG.8aVipQNIyMa');
 
 --Inserir produtos para Marcio Belo (id 1)
 INSERT INTO produtos (nome, descricao, usuario_id) VALUES
