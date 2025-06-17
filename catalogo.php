@@ -4,123 +4,82 @@ if (!isset($_SESSION['usuario_id'])) {
     header('Location: login.php');
     exit();
 }
+
+require 'db.php';
+
+  $usuario_id = $_SESSION['usuario_id'];
+
+  //query para buscar os produtos dos outros usuarios
+  $stmt = $pdo->prepare("SELECT p.*, u.nome AS nome_usuario 
+                          FROM produtos p 
+                          JOIN usuarios u ON p.usuario_id = u.id
+                          WHERE p.usuario_id != ?");
+  $stmt->execute([$usuario_id]);
+  $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/catalogo.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="shortcut icon" href="/img/webIcon.png" type="image/x-icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-
 </head>
-
 <body>
 
   <nav class="navbar bg-dark">
-    <a href="index.php" style="position: absolute; color: white; font-size: 2rem; margin-left: 20px;"><i
-        class="fa-solid fa-door-open"></i></a>
+    <a href="index.php" style="position: absolute; color: white; font-size: 2rem; margin-left: 20px;">
+      <i class="fa-solid fa-door-open"></i>
+    </a>
     <div class="container" style="justify-content: center;">
       <h1 class="text-info">Ecoescambo 🌲</h1>
     </div>
   </nav>
+
   <div class="lista-produto">
+
     <div class="topicos">
-      <a href="/3daw-Trabalho/meus_produtos.php">Meus Produtos</a>
+      <a href="meus_produtos.php">Meus Produtos</a>
     </div>
 
     <div class="filtro">
-
       <label>Filtrar por:</label>
       <input type="radio" id="todos" name="filtro" checked>
       <label for="todos">Todos</label>
 
       <input type="radio" id="interesse" name="filtro">
       <label for="interesse">Só de Interesse</label>
-
     </div>
 
+    <?php if (count($produtos) > 0): ?>
+      <?php foreach ($produtos as $produto): ?>
+        <div class="produto">
+          <div class="produto-info">
+            <h3><?= htmlspecialchars($produto['nome']) ?></h3>
+            <p><?= htmlspecialchars($produto['descricao']) ?></p>
+            <p><strong>Dono:</strong> <?= htmlspecialchars($produto['nome_usuario']) ?></p>
+          </div>
+          <button class="botao-interesse" onclick="alternarInteresse(this)">Tenho Interesse</button>
+        </div>
+      <?php endforeach; ?>
+    <?php else: ?>
+      <p>Não há produtos disponíveis no momento.</p>
+    <?php endif; ?>
 
-    <div class="produto">
-      <img
-        src="https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Farquivos%2Fids%2F560698%2F124267524_1_xlarge.jpg%3Fv%3D638750840343130000&w=540&q=75"
-        alt="Produto1" class="produto-img">
-      <div class="produto-info">
-        <h3>GOT - Guerra dos Tronos</h3> 
-        <p>Primeiro livro da saga, troco por outro livro</p>
-      </div>
-      <button class="botao-interesse" onclick="alternarInteresse(this)">Tenho Interesse</button>
-    </div>
-
-
-
-    <div class="produto">
-      <img
-        src="https://images.kabum.com.br/produtos/fotos/109942/mouse-gamer-redragon-lonewolf-2-pro-m721-pro-rgb-10-botoes-32000dpi-m721-pro_1580826158_m.jpg"
-        alt="Produto2" class="produto-img">
-      <div class="produto-info">
-        <h3>Mouse Gamer</h3>
-        <p>RGB, usado durante 3 anos, sem defeito</p>
-      </div>
-      <button class="botao-interesse" onclick="alternarInteresse(this)">Tenho Interesse</button>
-    </div>
-
-
-
-    <div class="produto">
-      <img src="https://www.galaxcommerce.com.br/sistema/upload/885/produtos/erika_2019-06-01_16-09-49_1.jpg"
-        alt="Produto2" class="produto-img">
-      <div class="produto-info">
-        <h3>Óculos de sol</h3>
-        <p>Lentes íntegras</p>
-      </div>
-      <button class="botao-interesse" onclick="alternarInteresse(this)">Tenho Interesse</button>
-    </div>
   </div>
-
 
   <footer class="footer">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <div class="footer-brand">Ecoescambo</div>
-          <p class="footer-text">Conectando pessoas e propósitos: aqui, seu descarte vira oportunidade, e cada troca é
-            um passo rumo a um planeta mais verde</p>
-          <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-md-6 text-md-end">
-          <ul class="footer-links">
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Privacidade</a></li>
-            <li><a href="#">Termos</a></li>
-          </ul>
-        </div>
-      </div>
-
       <div class="copyright text-center">
-        © 2025 Belo's trabalho. All rights reserved.
+        © 2025 Ecoescambo. Todos os direitos reservados.
       </div>
     </div>
-
   </footer>
+
   <script src="javascript/catalogo.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </html>
