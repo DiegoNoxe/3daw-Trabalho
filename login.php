@@ -22,6 +22,6 @@ if (!password_verify($senha, $usuario['senha'])) {
 }
 
 
-$_SESSION['usuario'] = $usuario['nome'];
-header("Location: catalogo.html");
+$_SESSION['usuario_id'] = $usuario['id'];
+header("Location: /3daw-Trabalho/catalogo.php");
 exit;

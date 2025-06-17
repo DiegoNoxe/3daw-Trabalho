@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,11 +14,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/catalogo.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="/img/webIcon.png" type="image/x-icon">
-  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -25,8 +34,7 @@
   </nav>
   <div class="lista-produto">
     <div class="topicos">
-      <a href="***">Catálogo</a>
-      <a href="meus_produtos.html">Meus Produtos</a>
+      <a href="/3daw-Trabalho/meus_produtos.php">Meus Produtos</a>
     </div>
 
     <div class="filtro">
@@ -78,14 +86,6 @@
     </div>
   </div>
 
-
-  <div>
- 
-  </div>
-
-
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
   <footer class="footer">
     <div class="container">
