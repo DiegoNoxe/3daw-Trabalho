@@ -1,8 +1,7 @@
---Cria o banco
 CREATE DATABASE IF NOT EXISTS ecoescambo;
 USE ecoescambo;
 
---Cria a tabela de usuários
+
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -10,7 +9,7 @@ CREATE TABLE usuarios (
     senha VARCHAR(255) NOT NULL
 );
 
---Cria tabela de produtos
+
 CREATE TABLE produtos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,

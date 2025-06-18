@@ -42,18 +42,29 @@
     </div>
 
 
-    <div class="produto" data-interessados="1">
-      <img src="https://i.zst.com.br/thumbs/45/12/34/1126455769.jpg" alt="Produto1" class="produto-img">
-        <div class="produto-info">
-            <h3>Jogo PS4</h3> 
-            <p>Já zerei, troco por outro jogo</p>
-        </div>
-        <button class="botao-interesse" onclick="verInteresse(this)">Ver Interesses</button>
-        <button class="editar" onclick="editar(this)">Editar
-        </button>
-        <button class="excluir" onclick="excluir(this)">Excluir
-        </button>
-    </div>
+    <div class="produto" data-id="123" data-interessados="1">
+  <img src="https://i.zst.com.br/thumbs/45/12/34/1126455769.jpg" alt="Produto1" class="produto-img">
+  <div class="produto-info">
+    <h3>Jogo PS4</h3> 
+    <p>Já zerei, troco por outro jogo</p>
   </div>
+  <button class="botao-interesse" onclick="verInteresse(this)">Ver Interesses</button>
+  <button class="editar" onclick="editar(this)">Editar</button>
+  <button class="excluir" onclick="excluir(this)">Excluir</button>
+</div>
+
+  </div>
+  <script>
+  function verInteresse(botao) {
+    const produto = botao.closest('.produto');
+    const id = produto.getAttribute('data-id');
+    if (id) {
+      window.location.href = `meusinteresses.php?id=${id}`;
+    } else {
+      alert("Produto sem ID definido.");
+    }
+  }
+</script>
+
 </body>
 </html>

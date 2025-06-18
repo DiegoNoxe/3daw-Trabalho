@@ -9,7 +9,7 @@ require 'db.php';
 
   $usuario_id = $_SESSION['usuario_id'];
 
-  //query para buscar os produtos dos outros usuarios
+  
   $stmt = $pdo->prepare("SELECT p.*, u.nome AS nome_usuario 
                           FROM produtos p 
                           JOIN usuarios u ON p.usuario_id = u.id
