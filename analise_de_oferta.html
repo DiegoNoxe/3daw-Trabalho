@@ -49,11 +49,14 @@
             </div>
             <div class="botoes">
                 <div class="btnAceita">
-                    <a href="catalogo.html"><button>Aceitar</button></a>
+                   <div class="btnAceita">
+    <button class="btn-aceitar" data-id="123">Aceitar</button>
+</div>
+
                 </div>
                 <div class="btnRecusar">
                     <a href="catalogo.html"><button>Recusar</button></a>
-                </div>
+                </div> 
             </div>
         </div>
     </main>
@@ -89,5 +92,33 @@
         </div>
     </div>
 </footer>
+
+<script>
+document.querySelectorAll('.btn-aceitar').forEach(button => {
+    button.addEventListener('click', function () {
+        const ofertaId = this.getAttribute('data-id');
+        const card = this.closest('.produto');
+
+        fetch('aceitar_oferta.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `id=${ofertaId}`
+        })
+        .then(response => response.text())
+        .then(result => {
+            console.log(result);
+            if (card) {
+                card.style.display = 'none';
+            }
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+        });
+    });
+});
+</script>
+
 </body>
 </html>
